@@ -9,3 +9,7 @@ export function toReplacePageNumber(urlToPage, num) {
 export function toStyleOff(page) {
   return page === false ? 'topage__off' : 'topage'
 }
+
+export function changeHttpToHttps(url) {
+  return url !== false ? url.replace('http://', `https://`) : 'false'
+}

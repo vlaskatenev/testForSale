@@ -1,9 +1,13 @@
-import {toStyleOff, totalPage} from "@/components/footer/footer.pure.function";
+import {
+  changeHttpToHttps,
+  toStyleOff,
+  totalPage,
+} from "@/components/footer/footer.pure.function";
 
 export function createFooter(object) {
   const currentPage = object.current_page
-  const previousPageUrl = object.previous_page_url
-  const nextPageUrl = object.next_page_url
+  const previousPageUrl = changeHttpToHttps(object.previous_page_url)
+  const nextPageUrl = changeHttpToHttps(object.next_page_url)
   const totalCount = object.total_count
 
   return `<div class="pagina">
