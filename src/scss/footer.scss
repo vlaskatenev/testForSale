@@ -1,0 +1,60 @@
+@import "variables";
+@import "mixins";
+
+.pagina{
+  float: bottom;
+  width: 100%;
+  height: 70px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  font-size: 12.8px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: YS Text,sans-serif;
+  -webkit-transition: color .25s;
+  -o-transition: color .25s;
+  -moz-transition: color .25s;
+  transition: color .25s;
+}
+
+.topage{
+  margin: 10px auto;
+  color: #04b;
+  cursor: pointer;
+  outline: none;
+}
+
+.topage:hover {
+  color: red;
+  -webkit-transition: none;
+  -o-transition: none;
+  -moz-transition: none;
+  transition: none;
+}
+
+.topage__off{
+  margin: 10px auto;
+  color: #7f7f7f;
+  outline: none;
+}
+
+.inner__page{
+  padding: 0 3px;
+  width: 50px;
+  /*padding-left: 17px;*/
+  text-align: center;
+  font-size: 1.5em;
+  outline: none;
+  height: 25px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  //margin-top: 31px;
+}
+.tatal__page{
+  font-size: 1.5em;
+  padding: 0 5px;
+}

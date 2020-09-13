@@ -1,0 +1,30 @@
+@mixin price-text(){
+  color: #222;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+
+}
+
+@mixin block-hover(){
+  border: 1px solid rgba(189, 29, 29, 0.5);
+  box-shadow: 0 0 10px #e2bebe;
+}
+
+@mixin image($padding: 20px) {
+  display: block;
+  padding: $padding;
+  margin: 0 auto;
+  max-width: 200px;
+  max-height: 230px;
+}
+
+@mixin name-product() {
+  font-family: YS Text,sans-serif;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #33c;
+}

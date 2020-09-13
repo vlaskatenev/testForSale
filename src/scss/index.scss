@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import "~normalize.css";
+
+@import "variables";
+@import "mixins";
+@import "header";
+@import "footer";
+@import "store";
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+.page {
+  max-width: 900px; /* Ширина элемента в пикселах */
+  padding: 10px; /* Поля вокруг текста */
+  margin: auto; /* Выравниваем по центру */
+}

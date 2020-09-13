@@ -1,0 +1,76 @@
+@import "variables";
+@import "mixins";
+
+.page__store{
+  width: 100%;
+}
+
+.product__tile {
+  float: left;
+  width: 300px;
+  height: 383px;
+  text-align: center;
+  margin: 10px 50px;
+  border: 1px solid $border-color;
+  background: white;
+  transition: .3s ease-in;
+  .image{
+    max-width: 200px;
+    max-height: 230px;
+    align-content: normal;
+    margin: 0 auto;
+  }
+  .image > img{
+    @include image($padding: 20px)
+
+  }
+
+  .name_product {
+    @include name-product();
+    padding: 10px;
+    display: block;
+    max-height: 72px;
+  }
+  .price{
+    display: block;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    @include price-text();
+  }
+  &:hover {
+    @include block-hover();
+  }
+}
+
+.product__list{
+  display: flex;
+  margin: 10px auto;
+  justify-content: left;
+  border: 1px solid $border-color;
+
+  .image{
+    width: 300px;
+    height: 230px;
+    padding-left: 80px;
+  }
+  .image > img{
+    float: left;
+    @include image($padding: 10px)
+  }
+  .name_product {
+    float: left;
+    width: 350px;
+    padding-left: -100px;
+    margin-top: 95px;
+    @include name-product();
+  }
+  .price{
+    margin-right: 26px;
+    margin-left: 10px;
+    margin-top: 90px;
+    @include price-text();
+  }
+  &:hover {
+    @include block-hover();
+  }
+}
