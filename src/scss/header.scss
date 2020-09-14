@@ -7,7 +7,9 @@
   position: relative;
 }
 .form{
-  position:relative; height:70px; margin: 0 auto;
+  position:relative;
+  height:70px;
+  margin: 0 auto;
 }
 .button i{
   display: block;
@@ -21,7 +23,7 @@
   font-size: 30px;
   display: block;
   cursor: pointer;
-  margin: 3px;
+  padding: 5px;
 }
 
 .input {
@@ -49,17 +51,18 @@
   -o-transition: color .25s;
   -moz-transition: color .25s;
   transition: color .25s;
-}
 
-.sortvaldown:hover {
-  color: red;
-  -webkit-transition: none;
-  -o-transition: none;
-  -moz-transition: none;
-  transition: none;
-}
-.sortvaldown::after {
-  content: "▲";
+  &:hover {
+    color: red;
+    -webkit-transition: none;
+    -o-transition: none;
+    -moz-transition: none;
+    transition: none;
+  }
+
+  &::after {
+    content: "▲";
+  }
 }
 
 .sortvalup {
@@ -76,17 +79,17 @@
   -o-transition: color .25s;
   -moz-transition: color .25s;
   transition: color .25s;
-}
 
-.sortvalup:hover {
-  color: red;
-  -webkit-transition: none;
-  -o-transition: none;
-  -moz-transition: none;
-  transition: none;
-}
-.sortvalup::after {
-  content: "▼";
+  &:hover {
+    color: red;
+    -webkit-transition: none;
+    -o-transition: none;
+    -moz-transition: none;
+    transition: none;
+  }
+  &::after {
+    content: "▼";
+  }
 }
 
 .sort{
@@ -97,7 +100,7 @@
 
 .change__style {
   display: flex;
-  margin-top: -8px;
+  margin-top: -18px;
   position: absolute;
   right: 10px;
 }

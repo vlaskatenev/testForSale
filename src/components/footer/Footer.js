@@ -54,6 +54,7 @@ export class Footer extends PageComponent {
           const toUrl = dataElem.data.next !== 'false'
               ? dataElem.data.next
               : this.$root.find('[data-prev]').data.prev
+          console.log(dataElem.data.next)
           this.$emit('updateStore', toReplacePageNumber(toUrl, $target.text()))
         }
       }

@@ -16,16 +16,21 @@ export function sortName($target) {
 }
 
 export function toUrlPageSortName($target) {
-  return $target.data['sorturl']+sortName($target.data.sortname)
+  return delPageNumber($target)+sortName($target.data.sortname)
 }
 
 export function toUrlPageSortPrice($target) {
-  return $target.data['sorturl']+sortPrice($target.data.sortprice)
+  return delPageNumber($target)+sortPrice($target.data.sortprice)
 }
 
 export function styleDefaultForList() {
   return toStyleDefault() === styleDefault ? 'select__on' : 'select__off'
 }
+
 export function styleDefaultForTile() {
   return toStyleDefault() === styleDefault ? 'select__off' : 'select__on'
+}
+
+function delPageNumber($target) {
+  return $target.data['sorturl'].replace(/page=\d+$/g, '')
 }
