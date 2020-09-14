@@ -8,3 +8,11 @@ export function toStyleDefault() {
     return styleDefault
   }
 }
+
+export function checkObjectToLenght(obj) {
+  try {
+    return obj.products.length
+  } catch (e) {
+    return 0
+  }
+}

@@ -7,9 +7,22 @@ export function toReplacePageNumber(urlToPage, num) {
 }
 
 export function toStyleOff(page) {
-  return page === false ? 'topage__off' : 'topage'
+  return page === false || page === '0' ? 'topage__off' : 'topage'
 }
 
 export function changeHttpToHttps(url) {
-  return url !== false ? url.replace('http://', `https://`) : 'false'
+  return url !== false ? url.replace('http://', `https://`) : url
+}
+
+export function checkObject(obj, key) {
+  try {
+    if (typeof obj === 'object') {
+      return obj[key]
+    } else {
+      return '0'
+    }
+  } catch (e) {
+    console.log('Error', e)
+    return 'Error'
+  }
 }

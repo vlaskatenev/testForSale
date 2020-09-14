@@ -1,6 +1,7 @@
 import {
+  checkObjectToLenght,
   toStyleDefault,
-} from "@/components/store/store.pure.function";
+} from "@/components/store/store.pure.function"
 
 function toCell({row, index, object}) {
   const objectNew = object
@@ -31,7 +32,7 @@ function withObject(object) {
 }
 
 export function createTable(object) {
-  const rowsCount = object.products.length
+  const rowsCount = checkObjectToLenght(object)
   const rows = []
 
   // создание строк

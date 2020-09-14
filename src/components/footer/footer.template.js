@@ -1,14 +1,15 @@
 import {
-  changeHttpToHttps,
+  changeHttpToHttps, checkObject,
   toStyleOff,
   totalPage,
 } from "@/components/footer/footer.pure.function";
 
 export function createFooter(object) {
-  const currentPage = object.current_page
-  const previousPageUrl = changeHttpToHttps(object.previous_page_url)
-  const nextPageUrl = changeHttpToHttps(object.next_page_url)
-  const totalCount = object.total_count
+  const currentPage = checkObject(object, 'current_page')
+  const previousPageUrl =
+    changeHttpToHttps(checkObject(object, 'previous_page_url'))
+  const nextPageUrl = changeHttpToHttps(checkObject(object, 'next_page_url'))
+  const totalCount = checkObject(object, 'total_count')
 
   return `<div class="pagina">
             <div class="prev ${toStyleOff(previousPageUrl)}" 
