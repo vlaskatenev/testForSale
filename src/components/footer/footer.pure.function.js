@@ -10,11 +10,11 @@ export function toStyleOff(page) {
   return page === false || page === '0' ? 'topage__off' : 'topage'
 }
 
-export function changeHttpToHttps(url) {
+export function changeHttp(url) {
   return url !== false ? url.replace('http://', `https://`) : url
 }
 
-export function checkObject(obj, key) {
+export function check(obj, key) {
   try {
     if (typeof obj === 'object') {
       return obj[key]
@@ -27,6 +27,6 @@ export function checkObject(obj, key) {
   }
 }
 
-export function offDataAttr(page, attr) {
+export function offAttr(page, attr) {
   return page === false || page === '0' ? 'off' : attr
 }
