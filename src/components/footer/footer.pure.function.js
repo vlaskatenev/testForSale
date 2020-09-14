@@ -26,3 +26,7 @@ export function checkObject(obj, key) {
     return 'Error'
   }
 }
+
+export function offDataAttr(page, attr) {
+  return page === false || page === '0' ? 'off' : attr
+}

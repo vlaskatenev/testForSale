@@ -10,6 +10,8 @@
   position:relative; height:70px; margin: 0 auto;
 }
 .button{
+  display: block;
+  cursor: pointer;
   position:absolute;
   right:20px;
   top:12px;
@@ -23,7 +25,6 @@
 
 .input {
   padding: 10px 17px;
-  /*padding-left: 17px;*/
   font-size: 1.5em;
   outline: none;
   height: 45px;
@@ -57,7 +58,7 @@
   transition: none;
 }
 .sortvaldown::after {
-  content: "▼";
+  content: "▲";
 }
 
 .sortvalup {
@@ -84,7 +85,7 @@
   transition: none;
 }
 .sortvalup::after {
-  content: "▲";
+  content: "▼";
 }
 
 .sort{
@@ -98,10 +99,6 @@
   margin-top: -8px;
   position: absolute;
   right: 10px;
-
-  //.button {
-  //  @include button(green);
-  //}
 }
 
 .select__on {
